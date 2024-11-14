@@ -32,7 +32,7 @@
 
 1. **Cifrar un mensaje**
 
-   - Crea un mensaje en un archivo llamado `mensaje.txt` con el texto “Confidencial: Proyecto secreto”.
+   - Crea un mensaje en un archivo llamado `mensaje.txt` con el texto “Mensaje cifrado para Rubensito con Samba”.
 
    - Utiliza la clave simétrica generada en la Parte 1 para cifrar el mensaje usando AES-256-CBC y guarda el mensaje cifrado en `mensaje_cifrado.enc`.
 
