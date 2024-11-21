@@ -14,6 +14,7 @@ total 128K
 -rw-rw-r-- 1 bonilla bonilla 359 nov 21 20:11 openssl_soluciones.md
 ```
 - Aquest es el contingut del arxiu `foto.png.64`.
+
 ![Text alternatiu](fotos_md/foto_fotobase64.png)
 
 b) Elimina uns quants caràcters qualssevol ubicats al mig del contingut de "foto.png.b64" (ha de ser al mig per tal de no modificar el "magic number" del fitxer) i genera la imatge corresponent a partir d'aquest fitxer modificat executant la comanda `openssl enc -d -a -in foto.png.b64 -out novafoto.png`  Intenta obrir amb un visor de fotos (per exemple, "eog") el fitxer "novafoto.png". ¿Què veus? ¿Què et diu la comanda file novafoto.png?
@@ -30,6 +31,7 @@ total 244K
 -rw-rw-r-- 1 bonilla bonilla 1,3K nov 21 20:19 openssl_soluciones.md
 ```
 - Pel tipus de ubuntu no es pot obrir.
+
 ![Text alternatiu](fotos_md/cap_novafoto.png)
 
 c) Torna a repetir l'apartat a) i tot seguit torna a executar, sense que hagis modificat res de `foto.png.b64`, la mateixa comanda openssl indicada a l'apartat b). ¿Què veus ara si obres "nova.foto.png" amb el visor de fotos?
@@ -58,6 +60,7 @@ drwxrwxr-x 2 bonilla bonilla 4,0K nov 21 20:21 fotos_md/
 ```
 
 - Aquest es el resultat de la nova foto:
+
 ![Text alternatiu](fotos_md/foto_novacheck.png)
 
 
