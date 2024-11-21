@@ -32,3 +32,32 @@ total 244K
 - Pel tipus de ubuntu no es pot obrir.
 ![Text alternatiu](fotos_md/cap_novafoto.png)
 
+c) Torna a repetir l'apartat a) i tot seguit torna a executar, sense que hagis modificat res de `foto.png.b64`, la mateixa comanda openssl indicada a l'apartat b). ¿Què veus ara si obres "nova.foto.png" amb el visor de fotos?
+
+```bash
+bonilla@bonilla ~/D/M/O/activities (main)> openssl enc -e -a -in foto.png -out foto.png.b64
+bonilla@bonilla ~/D/M/O/activities (main)> ll
+total 148K
+-rw-rw-r-- 1 bonilla bonilla  13K nov 21 20:10 foto.png
+-rw-rw-r-- 1 bonilla bonilla  18K nov 21 22:42 foto.png.b64
+drwxrwxr-x 2 bonilla bonilla 4,0K nov 21 20:21 fotos_md/
+-rw-rw-r-- 1 bonilla bonilla  13K nov 21 20:20 novafoto.png
+-rw-rw-r-- 1 bonilla bonilla  88K nov 21 20:06 openssl_exercicis.pdf
+-rw-rw-r-- 1 bonilla bonilla 2,2K nov 21 22:30 openssl_soluciones.md
+```
+```bash
+bonilla@bonilla ~/D/M/O/activities (main)> openssl enc -d -a -in foto.png.b64 -out novafoto.png
+bonilla@bonilla ~/D/M/O/activities (main)> ll
+total 148K
+-rw-rw-r-- 1 bonilla bonilla  13K nov 21 20:10 foto.png
+-rw-rw-r-- 1 bonilla bonilla  18K nov 21 22:42 foto.png.b64
+drwxrwxr-x 2 bonilla bonilla 4,0K nov 21 20:21 fotos_md/
+-rw-rw-r-- 1 bonilla bonilla  13K nov 21 22:44 novafoto.png
+-rw-rw-r-- 1 bonilla bonilla  88K nov 21 20:06 openssl_exercicis.pdf
+-rw-rw-r-- 1 bonilla bonilla 2,7K nov 21 22:43 openssl_soluciones.md
+```
+
+- Aquest es el resultat de la nova foto:
+![Text alternatiu](fotos_md/foto_novacheck.png)
+
+
