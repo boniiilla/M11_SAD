@@ -152,10 +152,29 @@ total 7,7M
 ```
 - No em deixa executar-lo, em diu que no esta en gzip format.
 
+c) Desxifra l'arxiu "Fotos.tar.gz.enc" mitjançant la comanda `openssl enc -d -aes-256-cbc -pbkdf2 -pass pass:1234 -in fotos.tar.gz.enc -out fotosFinal.tar.gz` i comprova que, efectivament, "fotosFinal.tar.gz" és equivalent a "Fotos.tar.gz" executant la comanda `tar -tzf fotosFinal.tar.gz`.
 
-
-
-
+```bash
+root@bonilla /h/b/D/M/O/a/tar_imatges# openssl enc -d -aes-256-cbc -pbkdf2 -pass pass:1234 -in fotos.tar.gz.enc -out fotosFinal.tar.gz
+root@bonilla /h/b/D/M/O/a/tar_imatges# ll
+total 12M
+-rw-r--r-- 1 root root 3,9M nov 28 19:43 fotosFinal.tar.gz
+-rw-r--r-- 1 root root 3,9M nov 28 19:13 fotos.tar.gz
+-rw-r--r-- 1 root root 3,9M nov 28 19:20 fotos.tar.gz.enc
+root@bonilla /h/b/D/M/O/a/tar_imatges# tar -tzf fotosFinal.tar.gz
+home/bonilla/Imágenes/
+home/bonilla/Imágenes/Capturas de pantalla/
+home/bonilla/Imágenes/Capturas de pantalla/Captura desde 2024-11-28 19-00-49.png
+home/bonilla/Imágenes/Capturas de pantalla/Captura desde 2024-11-28 19-03-09.png
+home/bonilla/Imágenes/Capturas de pantalla/Captura desde 2024-11-28 18-51-57.png
+home/bonilla/Imágenes/Capturas de pantalla/Captura desde 2024-11-28 18-58-09.png
+home/bonilla/Imágenes/Fondos de Pantalla/
+home/bonilla/Imágenes/Fondos de Pantalla/kali_2.png
+home/bonilla/Imágenes/Fondos de Pantalla/fondo.jpg
+home/bonilla/Imágenes/Fondos de Pantalla/kali_linux.jpeg
+home/bonilla/Imágenes/Fondos de Pantalla/asus_rog.jpeg
+home/bonilla/Imágenes/Camera/
+```
 
 
 
