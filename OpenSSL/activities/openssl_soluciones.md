@@ -64,3 +64,20 @@ drwxrwxr-x 2 bonilla bonilla 4,0K nov 21 20:21 fotos_md/
 ![Text alternatiu](fotos_md/foto_novacheck.png)
 
 
+d) Executa la comanda `echo "VmlzY2EgbGEgbXVudGFueWE=" | openssl enc -d -a` ¿Què veus a pantalla i per què? ¿I si ara executes la comanda `echo "Vm1selkyRWdiR0VnYlhWdWRHRnVlV0U9Cg==" | openssl enc -d -a | openssl enc -d -a` ?
+
+Si executo la comanda:
+```bash
+echo "VmlzY2EgbGEgbXVudGFueWE=" | openssl enc -d -a
+```
+Em surt la següent frase:
+![Text alternatiu](fotos_md/foto_frase1.png)
+
+I si executo la comanda:
+```bash
+echo "Vm1selkyRWdiR0VnYlhWdWRHRnVlV0U9Cg==" | openssl enc -d -a | openssl enc -d -a
+```
+
+Em surt la mateixa imatge:
+![Text alternatiu](fotos_md/foto_frase2.png)
+
