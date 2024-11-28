@@ -108,3 +108,12 @@ El que fa el codi es decodificar el missatge mitjançant base64, he probat 1, 2 
 
 Com pots veure, al primer intent no decodifica res, al segón si, i al tercer dona un error.
 
+### EXERCICI 2
+
+a) Crea un arxiu de tipus "tar.gz" que inclogui la carpeta "~/Imatges" (amb tot el seu contingut); suposarem que representa una còpia de seguretat de les teves fotos que vols emmagatzemar de forma segura. Per crear aquest arxiu "tar.gz" ho pots fer mitjançant la comanda `tar -czf Fotos.tar.gz ~/Imatges` (en aquest exemple l'arxiu "tar.gz" s'anomenarà "Fotos.tar.gz"). Comprova tot seguit que, efectivament, "Fotos.tar.gz" conté el que hauria executant la comanda `tar -tzf Fotos.tar.gz`.
+
+![Text alternatiu](fotos_md/tar-czf.png)
+
+![Text alternatiu](fotos_md/tar-tzf.png)
+
+
