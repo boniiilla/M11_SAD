@@ -71,6 +71,7 @@ Si executo la comanda:
 echo "VmlzY2EgbGEgbXVudGFueWE=" | openssl enc -d -a
 ```
 Em surt la següent frase:
+
 ![Text alternatiu](fotos_md/foto_frase1.png)
 
 I si executo la comanda:
@@ -79,6 +80,7 @@ echo "Vm1selkyRWdiR0VnYlhWdWRHRnVlV0U9Cg==" | openssl enc -d -a | openssl enc -d
 ```
 
 Em surt la mateixa imatge:
+
 ![Text alternatiu](fotos_md/foto_frase2.png)
 
 dII) Edita un arxiu anomenat "breaker.py" amb el següent contingut i dóna-li permisos d'execució. D'altra banda, crea un altre arxiu anomenat "missatgecodificat.txt" contenint la mateixa cadena emprada a l'apartat anterior (és a dir, sense cometes: "Vm1selkyRWdiR0VnYlhWdWRHRnVlV0U9Cg==") ¿Per a què serveix aquest codi? ¿Quina funció té el bucle allà indicat? ¿Quantes vegades l'hauràs de repetir fins trobar el missatge en clar? ¿Quin és?
@@ -97,9 +99,12 @@ for i in range(1,num+1):
 ![Text alternatiu](fotos_md/foto_breaker.png)
 
 Posem el .py en la carpeta breaker i també el missatge codificat:
+
 ![Text alternatiu](fotos_md/foto_missatgecodificat.png)
 
 El que fa el codi es decodificar el missatge mitjançant base64, he probat 1, 2 i fins a 3 vegades y aquest es el resultat:
+
 ![Text alternatiu](fotos_md/decode.png)
 
 Com pots veure, al primer intent no decodifica res, al segón si, i al tercer dona un error.
+
