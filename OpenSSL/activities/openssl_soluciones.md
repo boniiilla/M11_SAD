@@ -116,4 +116,46 @@ a) Crea un arxiu de tipus "tar.gz" que inclogui la carpeta "~/Imatges" (amb tot 
 
 ![Text alternatiu](fotos_md/tar-tzf.png)
 
+b) Xifra l'arxiu "Fotos.tar.gz" amb l'algoritme simètric aes-256-cbc. Això ho pots fer mitjançant la comanda `openssl enc -e -aes-256-cbc -pbkdf2 -p -in Fotos.tar.gz -out Fotos.tar.gz.enc` (en aquest exemple l'arxiu xifrat s'anomenarà "Fotos.tar.gz.enc"). Indica, com a valor de la "passphrase" que se't demanarà interactivament, la cadena "1234". ¿Què signifiquen els valors (mostrats a la pantalla gràcies a haver afegit el paràmetre -p) "salt", "key" i "iv"?
+
+```bash
+root@bonilla /h/b/D/M/O/a/tar_imatges# openssl enc -e -aes-256-cbc -pbkdf2 -p -in fotos.tar.gz -out fotos.tar.gz.enc
+enter AES-256-CBC encryption password:
+Verifying - enter AES-256-CBC encryption password:
+salt=444DA7F5507A04B1
+key=9F52A7F1A368470D5DAEF35DA4E84785189A30C7CF3D531B191E3A24AF10725E
+iv =CAC287B997DB49EF72768C2A5A84A7A7
+```
+-  **salt** significa un valor aleatori que reforça la seguretat, fent única la clau derivada de la passphrase.
+-  **key** és la clau que xifra les dades.
+- **iv** és un vector d'inicialització que assegura que el procés sigui menys predictible.
+
+```bash
+root@bonilla /h/b/D/M/O/a/tar_imatges# ll
+total 7,7M
+-rw-r--r-- 1 root root 3,9M nov 28 19:13 fotos.tar.gz
+-rw-r--r-- 1 root root 3,9M nov 28 19:20 fotos.tar.gz.enc
+```
+
+bII) Executa ara la comanda `tar -tzf fotos.tar.gz.enc`. ¿Què veus? ¿Què et diu la comanda file Fotos.tar.gz.enc?
+
+```bash
+root@bonilla /h/b/D/M/O/a/tar_imatges# tar -tzf fotos.tar.gz.enc
+
+gzip: stdin: not in gzip format
+tar: Child returned status 1
+tar: Error is not recoverable: exiting now
+root@bonilla /h/b/D/M/O/a/tar_imatges [2]# ll
+total 7,7M
+-rw-r--r-- 1 root root 3,9M nov 28 19:13 fotos.tar.gz
+-rw-r--r-- 1 root root 3,9M nov 28 19:20 fotos.tar.gz.enc
+```
+- No em deixa executar-lo, em diu que no esta en gzip format.
+
+
+
+
+
+
+
 
